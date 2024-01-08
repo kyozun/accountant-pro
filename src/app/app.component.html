@@ -1,5 +1,192 @@
-<p-button label="Submit" size="small" pRipple ></p-button>
+<nav class="flex justify-between px-4 shadow">
+  <div class="flex h-12 items-center space-x-4">
+    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="apps"></mat-icon>
+    <div>
+      <!--      <img src="./assets/logo.svg" alt="logo" class="w-20">-->
+      <img src="favicon.ico" alt="Logo" class="w-8" />
+    </div>
+    <div class="text-lg font-bold">Employee</div>
+  </div>
 
-<div class="card flex justify-content-center">
-  <p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" [showClear]="true" placeholder="Select a City"></p-dropdown>
+  <div class="flex items-center space-x-2">
+    <div class="inline-flex h-8 w-8 items-center justify-center rounded-full hover:cursor-pointer hover:bg-gray-200">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="notifications"></mat-icon>
+    </div>
+
+    <div class="inline-flex h-8 w-8 items-center justify-center rounded-full hover:cursor-pointer hover:bg-gray-200">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="help"></mat-icon>
+    </div>
+
+    <div class="inline-flex h-8 w-8 items-center justify-center rounded-full hover:cursor-pointer hover:bg-gray-200">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="more_horiz"></mat-icon>
+    </div>
+
+    <div class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-rose-500 font-bold text-white">
+      <div>CC</div>
+    </div>
+  </div>
+</nav>
+
+<div class="grid grid-cols-12">
+  <!--  <mat-sidenav-container class="example-container col-span-2 h-[680px] bg-black">-->
+  <!--    <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')" (closed)="events.push('close!')"> Sidenav content </mat-sidenav>-->
+
+  <!--    <mat-sidenav-content>-->
+  <!--      <p>-->
+  <!--        <mat-checkbox [(ngModel)]="opened">sidenav.opened</mat-checkbox>-->
+  <!--      </p>-->
+  <!--      <p>-->
+  <!--        <button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button>-->
+  <!--      </p>-->
+  <!--    </mat-sidenav-content>-->
+  <!--  </mat-sidenav-container>-->
+
+  <!--Left panel-->
+  <div class="col-span-2 h-[680px] bg-black">
+    <div class="flex w-full flex-shrink flex-col space-y-2">
+      <div class="m-4 flex items-center space-x-2 rounded bg-blue-500 p-2 text-sm font-bold text-white">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-6 w-6 text-white">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+          </svg>
+        </div>
+        <div>Profile</div>
+      </div>
+    </div>
+  </div>
+
+  <!--  Right panel-->
+  <div class="col-span-10 p-4 text-center">
+    <div class="h-fit overflow-hidden rounded-md shadow-lg">
+      <div class="relative h-[130px]">
+        <img src="./assets/profile-background.jpg" class="h-24 w-full object-cover object-left-top" alt="" />
+        <div class="absolute left-1/2 inline-flex h-24 w-24 -translate-x-1/2 -translate-y-1/2 transform items-center justify-center rounded-full bg-rose-500 font-bold text-white">
+          <div class="text-4xl">CC</div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 items-center gap-2">
+        <div class="col-start-2 col-end-3">
+          <div class="flex flex-row items-center justify-center space-x-2">
+            <div>
+              <span class="text-base font-bold">VUA ĂN MÀY</span>
+              <span>(NV00001)</span>
+            </div>
+
+            <span class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-green-500">
+              <mat-icon fontIcon="done" style="color: white; font-size: 16px; width: 16px; height: 16px"></mat-icon>
+            </span>
+          </div>
+        </div>
+        <div class="col-start-3 col-end-4 space-x-2 py-4">
+          <button mat-button mat-raised-button color="basic">
+            <mat-icon fontIcon="refresh"></mat-icon>
+            Refresh information
+          </button>
+          <button mat-button mat-raised-button color="primary">
+            <mat-icon fontIcon="edit"></mat-icon>
+            Update field
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-4 grid h-fit grid-cols-12 gap-2 overflow-hidden rounded-md">
+      <div class="col-span-3 border">
+        <form action="">
+          <mat-form-field class="w-full">
+            <mat-label>Search</mat-label>
+            <input type="text" matInput placeholder="Search information" />
+            <mat-icon matPrefix>search</mat-icon>
+          </mat-form-field>
+        </form>
+
+        <mat-action-list class="h-[400px] overflow-auto">
+          <button mat-list-item>Basic information</button>
+          <button mat-list-item>Contact information</button>
+          <button mat-list-item>Work information</button>
+          <button mat-list-item>Family information</button>
+          <button mat-list-item>Political, military, and medical information</button>
+          <button mat-list-item>Vaccination information</button>
+          <button mat-list-item>Costume information</button>
+          <button mat-list-item>Account information</button>
+          <button mat-list-item>Labor contract</button>
+          <button mat-list-item>Work history</button>
+          <button mat-list-item>Concurrently information</button>
+          <button mat-list-item>Salary history</button>
+          <button mat-list-item>Salary history</button>
+          <button mat-list-item>Salary history</button>
+          <button mat-list-item>Salary history</button>
+          <button mat-list-item>Salary history</button>
+          <button mat-list-item>Salary history</button>
+          <button mat-list-item>Salary history</button>
+          <button mat-list-item>Salary history</button>
+          <button mat-list-item>Salary history</button>
+        </mat-action-list>
+      </div>
+      <div class="col-span-9">
+        <div class="flex flex-row items-center justify-between">
+          <div class="font-bold text-blue-500">Basic information</div>
+          <button mat-button mat-stroked-button color="primary">
+            <mat-icon fontIcon="badge"></mat-icon>
+            Update information
+          </button>
+        </div>
+        <div class="text-left">
+          <div class="font-semibold">General information</div>
+          <div class="grid grid-cols-2 gap-2 gap-x-4">
+            <div class="grid grid-cols-2 items-center">
+              <div>Employee code</div>
+              <div class="border-b border-gray-400 py-2">NV000001</div>
+            </div>
+
+            <div class="grid grid-cols-2 items-center">
+              <div>Marital status</div>
+              <div class="border-b border-gray-400 py-2">-</div>
+            </div>
+
+            <div class="grid grid-cols-2 items-center">
+              <div>Marital status</div>
+              <div class="border-b border-gray-400 py-2">-</div>
+            </div>
+            <div class="grid grid-cols-2 items-center">
+              <div>Marital status</div>
+              <div class="border-b border-gray-400 py-2">-</div>
+            </div>
+            <div class="grid grid-cols-2 items-center">
+              <div>Marital status</div>
+              <div class="border-b border-gray-400 py-2">-</div>
+            </div>
+            <div class="grid grid-cols-2 items-center">
+              <div>Marital status</div>
+              <div class="border-b border-gray-400 py-2">-</div>
+            </div>
+            <div class="grid grid-cols-2 items-center">
+              <div>Marital status</div>
+              <div class="border-b border-gray-400 py-2">-</div>
+            </div>
+            <div class="grid grid-cols-2 items-center">
+              <div>Marital status</div>
+              <div class="border-b border-gray-400 py-2">-</div>
+            </div>
+            <div class="grid grid-cols-2 items-center">
+              <div>Marital status</div>
+              <div class="border-b border-gray-400 py-2">-</div>
+            </div>
+            <div class="grid grid-cols-2 items-center">
+              <div>Marital status</div>
+              <div class="border-b border-gray-400 py-2">-</div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button color="basic" mat-raised-button mat-button (click)="openDialog()">Open dialog</button>
 </div>

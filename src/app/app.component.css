@@ -1,0 +1,32 @@
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #b9b9b9;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #afafaf;
+}
+
+
+.my-form-field .mat-form-field-wrapper {
+  margin-bottom: -1.25em !important;
+}
+
+.classname_of_the_icon{
+  font-weight: 100 !important; // any weight you want your icon to be [bold, normal, 100, 200, ..., 800]
+font-size: 12px !important; // any size you want your icon to be
+}
