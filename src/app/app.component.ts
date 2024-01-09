@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core'
 import {CommonModule, NgOptimizedImage} from '@angular/common'
-import { RouterOutlet } from '@angular/router'
+import {RouterLink, RouterOutlet} from '@angular/router'
 import { MatIconModule } from '@angular/material/icon'
 import { MatSidenavModule } from '@angular/material/sidenav'
 import { MatCheckboxModule } from '@angular/material/checkbox'
@@ -16,7 +16,21 @@ import {MatMenuModule} from "@angular/material/menu";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MatIconModule, MatSidenavModule, MatCheckboxModule, FormsModule, MatButtonModule, MatInputModule, MatListModule, MatMenuModule, NgOptimizedImage],
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    MatIconModule,
+    MatSidenavModule,
+    MatCheckboxModule,
+    FormsModule,
+    MatButtonModule,
+    MatInputModule,
+    MatListModule,
+    MatMenuModule,
+    NgOptimizedImage,
+    MatRippleModule,
+    RouterLink,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
@@ -37,6 +51,17 @@ export class AppComponent implements OnInit {
       },
       width: '800px',
     })
+  }
+
+  showFiller = true
+
+  isDark = false
+  changeMode() {
+    this.isDark = !this.isDark
+  }
+
+  openSite() {
+    window.open('https://www.youtube.com/')
   }
 }
 
@@ -70,7 +95,7 @@ export class AppComponent implements OnInit {
           <mat-card>
             <mat-card-header>
               <mat-card-subtitle>
-                <div class="font-bold text-blue-600">Mặt trước</div>
+                <div class="font-bold text-green-600">Mặt trước</div>
               </mat-card-subtitle>
               <mat-card-title>Kéo ảnh mặt trước vào đây</mat-card-title>
             </mat-card-header>
@@ -80,7 +105,7 @@ export class AppComponent implements OnInit {
             </mat-card-content>
 
             <mat-card-actions>
-              <button mat-raised-button mat-button color="primary"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="image"></mat-icon>Choose Image</button>
+              <button mat-raised-button mat-button color="warn"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="image"></mat-icon>Choose Image</button>
             </mat-card-actions>
           </mat-card>
         </div>
@@ -89,7 +114,7 @@ export class AppComponent implements OnInit {
           <mat-card>
             <mat-card-header>
               <mat-card-subtitle>
-                <div class="font-bold text-blue-600">Mặt sau</div>
+                <div class="font-bold text-green-600">Mặt sau</div>
               </mat-card-subtitle>
               <mat-card-title>Kéo ảnh mặt trước vào đây</mat-card-title>
             </mat-card-header>
@@ -99,7 +124,7 @@ export class AppComponent implements OnInit {
             </mat-card-content>
 
             <mat-card-actions>
-              <button mat-raised-button mat-button color="primary"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="image"></mat-icon>Choose Image</button>
+              <button mat-raised-button mat-button color="warn"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="image"></mat-icon>Choose Image</button>
             </mat-card-actions>
           </mat-card>
         </div>
