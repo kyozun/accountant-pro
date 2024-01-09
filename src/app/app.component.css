@@ -22,11 +22,4 @@
 }
 
 
-.my-form-field .mat-form-field-wrapper {
-  margin-bottom: -1.25em !important;
-}
 
-.classname_of_the_icon{
-  font-weight: 100 !important; // any weight you want your icon to be [bold, normal, 100, 200, ..., 800]
-font-size: 12px !important; // any size you want your icon to be
-}
