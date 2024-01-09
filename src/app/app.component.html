@@ -2,10 +2,9 @@
   <div class="flex h-12 items-center space-x-4">
     <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="apps"></mat-icon>
     <div>
-      <!--      <img src="./assets/logo.svg" alt="logo" class="w-20">-->
-      <img src="favicon.ico" alt="Logo" class="w-8" />
+      <img src="favicon.ico" alt="Logo" class="w-8 h-8"/>
     </div>
-    <div class="text-lg font-bold">Employee</div>
+    <div class="text-lg font-bold hover:cursor-pointer">Employee</div>
   </div>
 
   <div class="flex items-center space-x-2">
@@ -21,9 +20,15 @@
       <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="more_horiz"></mat-icon>
     </div>
 
-    <div class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-rose-500 font-bold text-white">
+    <div class="inline-flex h-8 w-8 select-none items-center justify-center rounded-full bg-rose-500 font-bold text-white hover:cursor-pointer" [matMenuTriggerFor]="profileMenu">
       <div>CC</div>
     </div>
+
+    <mat-menu #profileMenu="matMenu">
+      <button mat-menu-item>Profile</button>
+      <button mat-menu-item>Settings</button>
+      <button mat-menu-item>Logout</button>
+    </mat-menu>
   </div>
 </nav>
 
@@ -117,20 +122,12 @@
           <button mat-list-item>Work history</button>
           <button mat-list-item>Concurrently information</button>
           <button mat-list-item>Salary history</button>
-          <button mat-list-item>Salary history</button>
-          <button mat-list-item>Salary history</button>
-          <button mat-list-item>Salary history</button>
-          <button mat-list-item>Salary history</button>
-          <button mat-list-item>Salary history</button>
-          <button mat-list-item>Salary history</button>
-          <button mat-list-item>Salary history</button>
-          <button mat-list-item>Salary history</button>
         </mat-action-list>
       </div>
       <div class="col-span-9">
         <div class="flex flex-row items-center justify-between">
           <div class="font-bold text-blue-500">Basic information</div>
-          <button mat-button mat-stroked-button color="primary">
+          <button mat-button mat-stroked-button color="primary" (click)="updateInformation()">
             <mat-icon fontIcon="badge"></mat-icon>
             Update information
           </button>
@@ -180,13 +177,9 @@
               <div>Marital status</div>
               <div class="border-b border-gray-400 py-2">-</div>
             </div>
-
-
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <button color="basic" mat-raised-button mat-button (click)="openDialog()">Open dialog</button>
 </div>

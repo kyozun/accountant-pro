@@ -1,0 +1,19 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+//$my-primary: mat.define-palette(mat.$indigo-palette);
+//$my-accent: mat.define-palette(mat.$pink-palette);
+$my-typography: mat.define-typography-config($font-family: '"Montserrat", sans-serif');
+
+$my-theme: mat.define-light-theme((
+        //color: (
+        //        primary: $my-primary,
+        //        accent: $my-accent,
+        //),
+        typography: $my-typography,
+));
+
+@include mat.all-component-themes($my-theme);
+
+

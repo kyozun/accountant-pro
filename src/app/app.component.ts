@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core'
-import { CommonModule } from '@angular/common'
+import {CommonModule, NgOptimizedImage} from '@angular/common'
 import { RouterOutlet } from '@angular/router'
 import { MatIconModule } from '@angular/material/icon'
 import { MatSidenavModule } from '@angular/material/sidenav'
@@ -11,11 +11,12 @@ import {MatCardModule} from "@angular/material/card";
 import {MatRippleModule} from "@angular/material/core";
 import {MatListModule} from "@angular/material/list";
 import {MatInputModule} from "@angular/material/input";
+import {MatMenuModule} from "@angular/material/menu";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MatIconModule, MatSidenavModule, MatCheckboxModule, FormsModule, MatButtonModule, MatInputModule, MatListModule],
+  imports: [CommonModule, RouterOutlet, MatIconModule, MatSidenavModule, MatCheckboxModule, FormsModule, MatButtonModule, MatInputModule, MatListModule, MatMenuModule, NgOptimizedImage],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
@@ -29,7 +30,7 @@ export class AppComponent implements OnInit {
 
   constructor(public dialog: MatDialog) {}
 
-  openDialog() {
+  updateInformation() {
     this.dialog.open(DialogDataExampleDialog, {
       data: {
         animal: 'panda',
@@ -71,7 +72,7 @@ export class AppComponent implements OnInit {
               <mat-card-subtitle>
                 <div class="font-bold text-blue-600">Mặt trước</div>
               </mat-card-subtitle>
-              <mat-card-title>Hoặc kéo ảnh mặt trước vào đây</mat-card-title>
+              <mat-card-title>Kéo ảnh mặt trước vào đây</mat-card-title>
             </mat-card-header>
             <mat-card-content>
               <p>Kích thước ảnh lớn hơn 640 x 480</p>
@@ -90,7 +91,7 @@ export class AppComponent implements OnInit {
               <mat-card-subtitle>
                 <div class="font-bold text-blue-600">Mặt sau</div>
               </mat-card-subtitle>
-              <mat-card-title>Hoặc kéo ảnh mặt trước vào đây</mat-card-title>
+              <mat-card-title>Kéo ảnh mặt trước vào đây</mat-card-title>
             </mat-card-header>
             <mat-card-content>
               <p>Kích thước ảnh lớn hơn 640 x 480</p>
